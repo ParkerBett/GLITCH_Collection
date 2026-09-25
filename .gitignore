@@ -1,0 +1,11 @@
+# Build / Temp
+*.tmp
+/temp/
+/build/
+
+
+# Ignore Assets
+
+*.mp4
+*.wav
+*.mp3
