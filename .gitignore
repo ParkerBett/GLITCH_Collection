@@ -3,3 +3,6 @@
 /android/
 
 *.mp4
+*bat
+
+/temp/
