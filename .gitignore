@@ -1,11 +1,5 @@
-# Build / Temp
-*.tmp
-/temp/
-/build/
-
-
-# Ignore Assets
+# Godot 4+ specific ignores
+.godot/
+/android/
 
 *.mp4
-*.wav
-*.mp3

@@ -1,0 +1,41 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="GLITCH Collection"
+config/version="v1.0.0"
+run/main_scene="uid://dnhmydnw7rjwo"
+config/features=PackedStringArray("4.7", "GL Compatibility")
+boot_splash/image="uid://bm4kvvlqdyx1s"
+config/icon="uid://dy7w2jelu2wns"
+boot_splash/minimum_display_time=300
+
+[autoload]
+
+Global="*uid://s0xd1431owtj"
+
+[display]
+
+window/size/viewport_width=1440
+window/size/viewport_height=810
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+window/vsync/vsync_mode=2
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+rendering_device/driver.windows="d3d12"
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
