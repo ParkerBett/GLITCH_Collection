@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="GLITCH Collection"
-config/version="v1.0.0"
+config/version="1.0.0"
 run/main_scene="uid://dnhmydnw7rjwo"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 boot_splash/image="uid://bm4kvvlqdyx1s"

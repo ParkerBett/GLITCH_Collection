@@ -5,9 +5,19 @@
 [ext_resource type="Texture2D" uid="uid://dq1ndqeun1ynl" path="res://assets/images/murder-drones/main.png" id="3_tefeu"]
 [ext_resource type="Texture2D" uid="uid://ck55b3fe518dn" path="res://assets/images/murder-drones/main_selected.png" id="4_o6xl0"]
 [ext_resource type="Texture2D" uid="uid://boauxdbihhov7" path="res://assets/images/digital-circus/main_selected.png" id="5_tipki"]
+[ext_resource type="FontFile" uid="uid://c8w3shblks7dh" path="res://assets/fonts/Sequel.ttf" id="6_tefeu"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_85g3d"]
 load_path = "res://.godot/imported/main.jpg-2c30a97e03a08af9f50a8d1b2b080bdf.ctex"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o6xl0"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tipki"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_85g3d"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="Main" type="Control" unique_id=1379159096]
 layout_mode = 3
@@ -71,5 +81,36 @@ texture_hover = ExtResource("5_tipki")
 ignore_texture_size = true
 stretch_mode = 5
 
+[node name="Quit" type="Button" parent="." unique_id=450281757]
+layout_mode = 1
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 100.0
+offset_bottom = 70.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.49747366, 0.49747366, 0.49747366, 1)
+theme_override_colors/font_hover_color = Color(0.8047424, 0.80474263, 0.8047432, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
+theme_override_fonts/font = ExtResource("6_tefeu")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_o6xl0")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_tipki")
+theme_override_styles/hover = SubResource("StyleBoxFlat_85g3d")
+text = "QUIT"
+
+[node name="Version" type="Label" parent="." unique_id=1976848786]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -35.0
+offset_right = 77.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 20
+text = "null"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="pressed" from="Buttons/Murder Drones" to="." method="_on_murder_drones_pressed"]
 [connection signal="pressed" from="Buttons/Digital Circus" to="." method="_on_digital_circus_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
