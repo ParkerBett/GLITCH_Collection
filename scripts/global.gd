@@ -8,6 +8,19 @@ var murder_drones_number = 1
 var digital_circus_main_camera = true
 var digital_circus_number = 1
 
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("fullscreen"):
+		toggle_fullscreen()
+
+func toggle_fullscreen() -> void:
+	var current_mode = DisplayServer.window_get_mode()
+	
+	if current_mode == DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+	else:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN)
+
+
 func play_video(video: String):
 	var root = get_tree().root
 	var current_scene = get_tree().current_scene
